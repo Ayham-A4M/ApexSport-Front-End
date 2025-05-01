@@ -24,6 +24,7 @@ import useScrollToUp from './hooks/useScrollToUp'
 import useRefreshToken from './hooks/useRefreshToken'
 import Aos from 'aos'
 import "aos/dist/aos.css";
+import LoadingPage from './pages/LoadingPage'
 import ProtectedRoute from './components/ProtectedRoute'
 import ErrorPage from './pages/ErrorPage'
 export const User = createContext({});
@@ -54,7 +55,7 @@ function App() {
       {/* gutter gap between each toast reverse order for new toast at the end */}
       <Toaster position='bottom-right' reverseOrder={true} gutter={8} toastOptions={{ duration: 5000, }} />
       <User.Provider value={{ user, setUser }}>
-        <Suspense>
+        <Suspense fallback={<LoadingPage/>}>
           <Routes>
             <Route element={<MainLayout />}>
 
