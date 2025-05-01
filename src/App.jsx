@@ -4,7 +4,7 @@ import Products from './pages/Products'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { createContext } from 'react'
 const AboutUs = React.lazy(() => import('./pages/AboutUs'))
-const CartPage = React.lazy(() => import('./pages/CartPage'))
+const CartPage = React.lazy(() => import('./pages/CartPage.jsx'))
 const Login = React.lazy(() => import('./pages/Login'))
 const AdminPage = React.lazy(() => import('./pages/AdminPage'))
 const MangmentProduct = React.lazy(() => import('./pages/MangmentProduct'))
