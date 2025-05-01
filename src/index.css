@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@media (max-width:850px) {
+    .MenueIcon {
+        display: flex;
+    }
+}
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* #2D68C4 */
+:root {
+    --white-one:#f4f4f4;
+    --white-two:#ffffff;
+    --main-blue: #1867c0;
+    --dark-blue:#2c3e50;
+    --hover-links: rgb(247, 247, 247);
+    --card-background:#ffffff;
+    --text-color: rgb(18, 18, 18);
+
+}
+
+.inputStyle {
+    padding: 8px 17px 9px 10px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ababab;
+    /* outline: none; */
+}
+.inputStyle:focus{
+    outline-width: 0px;
+}
+.login_signup_input{
+    color: var(--white-two);
+    width:100%;
+    outline-width:2;
+    outline-color:var(--white-two);
+    font-family: sans-serif;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding:5px 10px;
+    font-weight: 500;
+    background-color:#334155eb;
+
+
+}
+
+.options>option {
+    /* border-b-[1px] border-slate-400 hover:bg-violet-400 hover:text-slate-100 */
+    border-bottom: #c9c9c9;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+.options>option:hover {
+    background-color: #3e3e3e19;
+    color: var(--main-blue);
+}
+
+.inputStyle:focus {
+    border-color: var(--main-blue);
+}
+
+
+.Login-SignUp .loginCard {
+    background-image: url(./assets/LoginBackground.svg);
+    background-position: center;
+    object-fit: cover;
+}
+
+.Login-SignUp .SignUpCard {
+
+    background-image: url(./assets/SignUpBackground.svg);
+    background-position: center;
+    object-fit: cover;
+}
+
+
+
+.productCard {
+    box-shadow: rgb(209, 209, 209) 0px 1px 8px 1px;
+}
+
+.productCard:hover {
+    transform: scale(1.01);
+}
+
+.productCard:hover .whishlist_view {
+    display: flex;
+}
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
+}
+
+/* for loader */
+
+/* loader1 */
+.newtons-cradle {
+    --uib-size: 25px;
+    --uib-speed: 1.2s;
+    --uib-color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
+}
+
+.newtons-cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+}
+
+.newtons-cradle__dot::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+}
+
+.newtons-cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+}
+
+.newtons-cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        transform: rotate(70deg);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes swing2 {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(-70deg);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* loader1 */
+
+/* loader2 */
+/* From Uiverse.io by satyamchaudharydev */
+.loading {
+    --speed-of-animation: 0.9s;
+    --gap: 3px;
+    --first-color: #2e3543;
+    --second-color: #2e3543;
+    --third-color: #2e3543;
+    --fourth-color: #2e3543;
+    --fifth-color: #2e3543;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    gap: 3px;
+    height: 22px;
+}
+
+.loading span {
+    width: 3px;
+    height: 15px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+}
+
+@keyframes scale {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.05);
+    }
+
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+/* loader2 */
+
+/* for loader */
+
+
+
+/* checkbox in orders page  */
+/* From Uiverse.io by Galahhad */
+/* checkbox settings 👇 */
+
+.ui-checkbox {
+    --primary-color: var(--main-blue);
+    --secondary-color: #fff;
+    --primary-hover-color: #c640ff;
+    /* checkbox */
+    --checkbox-diameter: 20px;
+    --checkbox-border-radius: 5px;
+    --checkbox-border-color: var(--main-blue);
+    --checkbox-border-width: 1px;
+    --checkbox-border-style: solid;
+
+    /* checkmark */
+    --checkmark-size: 1.2;
+}
+
+.ui-checkbox,
+.ui-checkbox *,
+.ui-checkbox *::before,
+.ui-checkbox *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--checkbox-diameter);
+    height: var(--checkbox-diameter);
+    border-radius: var(--checkbox-border-radius);
+    background: var(--secondary-color);
+    border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.ui-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+    box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+    border-radius: inherit;
+    opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+    top: 40%;
+    left: 50%;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+    -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+
+/* actions */
+
+.ui-checkbox:hover {
+    border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+    background: var(--primary-color);
+    border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+    -webkit-transition: none;
+    -o-transition: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: none;
+    opacity: 1;
+}
+
+/* checkbox in orders page  */
+.football {
+    animation: iconAnimation 1.5s linear infinite alternate;
+}
+
+.basketball {
+    animation: iconAnimation 1.7s linear infinite alternate;
+}
+
+.tennis {
+    animation: iconAnimation 1.9s linear infinite alternate;
+}
+
+.t-shirt {
+    animation: iconAnimation 2.08s linear infinite alternate;
+}
+
+.volleyball {
+    animation: iconAnimation 2.17s linear infinite alternate;
+}
+
+.gym {
+    animation: iconAnimation 2.23s linear infinite alternate;
+}
+
+@keyframes iconAnimation {
+    100% {
+        transform: translateY(-5px);
+        color: #6b96ca;
+    }
+}
+
+
+
+/* media query slick carosel */
+.slick-slide>div{
+    padding: 20px 0px 20px 0px;
+}
+.homeHero .slick-slide>div{
+    padding: 0px 0px;
+    /* max-height: 216px; */
+    
+}
+@media(max-width:800px) {
+    .slick-slide>div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* media query slick carosel */

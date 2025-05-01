@@ -1,0 +1,7 @@
+.links a{
+    transition: all;
+    transition-duration: 300ms;
+}
+.navBar{
+    backdrop-filter:blur(20px);
+}

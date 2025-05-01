@@ -1,0 +1,11 @@
+@media (max-width:650px){
+    .imagesSection{
+        width:100%;
+    }
+    .productInformationSection{
+        width:100%;
+    }
+    .containerProductPage{
+        flex-direction: column;
+    }
+}
