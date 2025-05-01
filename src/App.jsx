@@ -11,6 +11,7 @@ const MangmentProduct = React.lazy(() => import('./pages/MangmentProduct'))
 const AllProducts = React.lazy(() => import('./pages/AllProducts'))
 const MangmentOrders = React.lazy(() => import('./pages/MangmentOrders'))
 const OrdersPage = React.lazy(() => import('./pages/OrdersPage'))
+import LoadingPage2 from './pages/LoadingPage2.jsx'
 import UnAuthorized from './pages/UnAuthorized'
 import Home from './pages/Home'
 import ProductPage from './pages/product'
@@ -45,7 +46,7 @@ function App() {
   const [isloading,setIsLoading]=useState(true);
   const { user, setUser } = useFetchUser(setIsLoading);
   const { data, setData, url, setUrl, totalPages } = useFetchProductsData(isloading,user?user.Role:null) 
-  const location=useLocation();
+
 
 
 
@@ -56,7 +57,7 @@ function App() {
       {/* gutter gap between each toast reverse order for new toast at the end */}
       <Toaster position='bottom-right' reverseOrder={true} gutter={8} toastOptions={{ duration: 5000, }} />
       <User.Provider value={{ user, setUser }}>
-        <Suspense fallback={<LoadingPage/>} key={location.key}>
+        <Suspense fallback={<LoadingPage2/>} >
           <Routes>
             <Route element={<MainLayout />}>
 
