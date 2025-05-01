@@ -1,4 +1,4 @@
-import StatisticsCardsGroup from "../AdminPage/statisticsCardsGroup";
+import StatisticsCardsGroup from "../AdminPage/StatisticsCardsGroup";
 import WelcomeAmdin from "../AdminPage/WelcomeAmdin";
 import SupportAdmin from "../AdminPage/SupportAdmin";
 import OrdersStatus from "../AdminPage/OrdersStatus";

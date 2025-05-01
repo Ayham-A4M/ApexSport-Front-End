@@ -2,7 +2,7 @@ import InformationCard from "./InformationCard"
 import srcImage from "../functions/srcImage"
 const TopProductsOrder = ({ topProducts }) => {
     return (
-        <InformationCard title={'most 3 products orderd'}>
+        <InformationCard title={'Top 3 products orderd'}>
 
             <div className="flex pt-[10px] flex-col gap-[20px]  w-full pr-[10px] text-[15px] text-black">
                 <div className="flex font-semibold text-blue-800 p-[10px] justify-between items-center">

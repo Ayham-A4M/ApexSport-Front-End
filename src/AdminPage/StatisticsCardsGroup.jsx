@@ -1,4 +1,4 @@
-import StatisticCard from "./statisticCard"
+import StatisticCard from "./StatisticCard"
 
 
 function StatisticsCardsGroup({ statistics }) {
