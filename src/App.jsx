@@ -36,6 +36,7 @@ export const User = createContext({});
 
 function App() {
 
+  const { user, setUser } = useFetchUser(setIsLoading);
   useRefreshToken();
   useEffect(() => {
     Aos.init();
@@ -43,7 +44,6 @@ function App() {
   }, []);
   useScrollToUp()
   const [isloading,setIsLoading]=useState(true);
-  const { user, setUser } = useFetchUser(setIsLoading);
   const { data, setData, url, setUrl, totalPages } = useFetchProductsData(isloading,user?user.Role:null) 
   
 

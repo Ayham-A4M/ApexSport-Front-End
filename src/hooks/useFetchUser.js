@@ -1,10 +1,10 @@
 import getPersonalInformation from "../functions/getPersonalInformation";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 export function useFetchUser(setIsLoading) {
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
-    useLayoutEffect(() => {
+    useEffect(() => {
         async function getLogin() {
             try {
                 const res = await getPersonalInformation();
