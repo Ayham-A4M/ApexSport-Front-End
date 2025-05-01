@@ -1,9 +1,8 @@
 import LoginButton from "../components/LoginButton"
 import LogoutButton from "../components/LogoutButton"
-import { useContext } from "react"
-import { User } from "../App"
-const Log_in_Out = ({ setClicked }) => {
-    const userContext = useContext(User);
+
+const Log_in_Out = ({ setClicked,userContext }) => {
+   
     return (
         <>
             {

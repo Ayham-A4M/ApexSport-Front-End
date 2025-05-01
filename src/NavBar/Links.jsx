@@ -12,7 +12,7 @@ const Links = () => {
     return (
         <div className="links w-fit flex shrink flex-row items-center gap-[10px] max-[850px]:hidden">
             <DirectionsLinks directions={(!userContext.user || userContext.user.Role === "user") ? userDirections : userContext.user.Role === "Admin" ? adminDirections : false} />
-            <Log_in_Out />
+            <Log_in_Out userContext={userContext}/>
 
         </div>
     )
