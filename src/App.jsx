@@ -45,7 +45,8 @@ function App() {
   const [isloading,setIsLoading]=useState(true);
   const { user, setUser } = useFetchUser(setIsLoading);
   const { data, setData, url, setUrl, totalPages } = useFetchProductsData(isloading,user?user.Role:null) 
-  
+  const location=useLocation();
+
 
 
 
@@ -55,7 +56,7 @@ function App() {
       {/* gutter gap between each toast reverse order for new toast at the end */}
       <Toaster position='bottom-right' reverseOrder={true} gutter={8} toastOptions={{ duration: 5000, }} />
       <User.Provider value={{ user, setUser }}>
-        <Suspense fallback={<LoadingPage/>}>
+        <Suspense fallback={<LoadingPage/>} key={location.key}>
           <Routes>
             <Route element={<MainLayout />}>
 
