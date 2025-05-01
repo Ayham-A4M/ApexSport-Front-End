@@ -1,5 +1,3 @@
-
-
 const LoadingPage2 = () => {
     return (
         <div className="w-full h-screen flex flex-col py-[100px] justify-center items-center gap-[20px]">

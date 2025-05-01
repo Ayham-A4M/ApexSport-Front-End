@@ -3,6 +3,7 @@ import SectionHeader from "../components/SectionHeader"
 import DisplayOrders from "../Orders/DisplayOrders";
 import OopsSomthingWrong from "../components/OopsSomthingWrong";
 import LoadingPage from "./LoadingPage";
+import emptyBox from "../assets/emptyCart.svg"
 const OrdersPage = () => {
   const {orders,setOrder}=useGetOrders();
   return (
@@ -20,7 +21,7 @@ const OrdersPage = () => {
               </div>
               <DisplayOrders orders={orders} />
             </>
-            : <div>Empty</div>
+            : <div className="flex justify-start flex-col items-center gap-5"><img src={emptyBox} alt="empty box" className="w-[200px] aspect-square" /></div>
 
           : typeof orders == 'undefined' ? <OopsSomthingWrong /> : <LoadingPage />
       }
