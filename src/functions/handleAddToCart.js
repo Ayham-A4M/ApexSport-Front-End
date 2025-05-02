@@ -6,7 +6,8 @@ const handleAddToCart = async (productId, quantity, customes,setSendingReq) => {
    try {
       const res = await axios.put(`${url}/api/addToCart`, { productId, quantity,customes }, { withCredentials: true });
       if (res.status <250) {
-         toast.success(res.data.msg);
+         console.log(res,'response')
+         toast.success(res?.data?.msg);
       }
 
    } catch (err) {
