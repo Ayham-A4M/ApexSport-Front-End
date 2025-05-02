@@ -5,7 +5,7 @@ const handleAddToCart = async (productId, quantity, customes,setSendingReq) => {
    const { url } = useGetEnviroment();
    try {
       const res = await axios.put(`${url}/api/addToCart`, { productId, quantity,customes }, { withCredentials: true });
-      if (res.statusText == "OK") {
+      if (res.status <250) {
          toast.success(res.data.msg);
       }
 
