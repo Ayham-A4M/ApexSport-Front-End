@@ -25,7 +25,6 @@ import useScrollToUp from './hooks/useScrollToUp'
 import useRefreshToken from './hooks/useRefreshToken'
 import Aos from 'aos'
 import "aos/dist/aos.css";
-import LoadingPage from './pages/LoadingPage'
 import ProtectedRoute from './components/ProtectedRoute'
 import ErrorPage from './pages/ErrorPage'
 export const User = createContext({});
@@ -37,14 +36,16 @@ export const User = createContext({});
 
 function App() {
 
+  const [isloading,setIsLoading]=useState(true);
+  const { user, setUser } = useFetchUser(setIsLoading);
+
   useRefreshToken();
   useEffect(() => {
     Aos.init();
     Aos.refresh();
   }, []);
   useScrollToUp()
-  const [isloading,setIsLoading]=useState(true);
-  const { user, setUser } = useFetchUser(setIsLoading);
+  
   const { data, setData, url, setUrl, totalPages } = useFetchProductsData(isloading,user?user.Role:null) 
 
 
