@@ -36,10 +36,10 @@ export const User = createContext({});
 
 function App() {
 
+  useRefreshToken();
   const [isloading,setIsLoading]=useState(true);
   const { user, setUser } = useFetchUser(setIsLoading);
 
-  useRefreshToken();
   useEffect(() => {
     Aos.init();
     Aos.refresh();
