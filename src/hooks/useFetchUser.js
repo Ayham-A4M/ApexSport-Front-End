@@ -8,7 +8,7 @@ export function useFetchUser(setIsLoading) {
         async function getLogin() {
             try {
                 const res = await getPersonalInformation();
-                console.log(res.data,'data user')
+                console.log(res,'data user')
                 if (res && res.statusText === "OK") { setUser(res.data); res.data.Role === "Admin" ? navigate('/adminPage', { replace: true }) : false }
             } catch (err) {
                 console.log('err');
@@ -19,5 +19,5 @@ export function useFetchUser(setIsLoading) {
         }
         getLogin();
     }, [])
-    
+    return { user, setUser }
 }
