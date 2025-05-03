@@ -34,7 +34,7 @@ const SignUpForm = () => {
             <input type="text" placeholder="UserName:" className={`login_signup_input ${errors.UserName ? 'border-[2px] border-red-500' : ''}  `} {...register('UserName')} />
             <input type="text" placeholder="Email:" className={`login_signup_input ${errors.Email ? 'border-[2px] border-red-500' : ''}  `} {...register('Email')} />
             <div className="w-full h-fit relative  ">
-                <IoEye className="w-[20px]     top-[50%] translate-y-[-50%] text-slate-300 h-[20px] absolute right-[10px]" style={{ display: `${hidePass ? 'block' : 'none'}` }} onClick={() => { setHidePass(false) }} />
+                <IoEye className="w-[20px] top-[50%] translate-y-[-50%] text-slate-300 h-[20px] absolute right-[10px]" style={{ display: `${hidePass ? 'block' : 'none'}` }} onClick={() => { setHidePass(false) }} />
                 <IoEyeOff className="w-[20px] top-[50%] translate-y-[-50%] text-slate-300 h-[20px] absolute right-[10px]" style={{ display: `${hidePass ? 'none' : 'block'}` }} onClick={() => { setHidePass(true) }} />
 
                 <input type={hidePass ? 'password' : 'text'} placeholder="Password:" className={`login_signup_input ${errors.Email ? 'border-[2px] border-red-500' : ''}`} {...register('password')} />
