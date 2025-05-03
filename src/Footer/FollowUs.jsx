@@ -7,7 +7,7 @@ const FollowUs = () => {
     return (
         <div className="FollowUs flex items-center flex-col gap-[25px] text-slate-200">
             <h2 className="capitalize font-bold text-[18px] ">Follow Us</h2>
-            <div className="flex felx-row gap-[15px] flex-wrap justify-center items-center relative z-0">
+            <div className="flex felx-row gap-[15px] flex-wrap justify-center items-center">
                 <a href="" data-aos="fade-in" data-aos-delay="100" className="text-[25px]"><FaInstagram className="hover:text-pink-600" /></a>
                 <a href="" data-aos="fade-in" data-aos-delay="200" className="text-[25px]"><FaXTwitter className="hover:text-gray-500" /></a>
                 <a href="" data-aos="fade-in" data-aos-delay="300" className="text-[25px]"><FaFacebookSquare className="hover:text-blue-600" /></a>

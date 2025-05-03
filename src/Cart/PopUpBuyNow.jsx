@@ -30,8 +30,8 @@ export const PopUpBuyNow = ({ numberOfItems, setShowPopUp, subTotalPrice }) => {
     }
 
     return (
-        <div className="fixed inset-0 flex  justify-center items-center backdrop-blur-[6px] bg-[#cecece80]">
-            <div className=" relative rounded-[10px] px-[15px] py-[20px] flex flex-col gap-[30px]  text-[--text-color] w-full max-w-[500px]  bg-slate-100">
+        <div className="fixed inset-0 flex z-50 justify-center items-center backdrop-blur-[6px] bg-[#cecece80]">
+            <div className=" relative z-50 rounded-[10px] px-[15px] py-[20px] flex flex-col gap-[30px]  text-[--text-color] w-[98%] max-w-[500px]  bg-slate-100">
                 <IoMdCloseCircle className="absolute top-[-7px] cursor-pointer right-[-7px] z-50 text-red-600 text-[30px]" onClick={() => setShowPopUp(false)} />
                 <div className="flex justify-center">
                     <h2 className="text-[30px]">Check Out</h2>
