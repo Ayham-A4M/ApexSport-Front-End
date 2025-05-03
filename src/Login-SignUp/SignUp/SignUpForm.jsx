@@ -39,7 +39,7 @@ const SignUpForm = () => {
 
                 <input type={hidePass ? 'password' : 'text'} placeholder="Password:" className={`login_signup_input ${errors.Email ? 'border-[2px] border-red-500' : ''}`} {...register('password')} />
             </div>
-            <button type="submit" className="bg-slate-300 text-slate-700  font-bold px-[18px] py-[5px] rounded-[6px] absolute top-[108%] left-[50%] translate-x-[-50%]">{sendingReq ? <Loader2 /> : 'Sign Up'}</button>
+            <button disabled={sendingReq} type="submit" className="bg-slate-300 text-slate-700  font-bold px-[18px] py-[5px] rounded-[6px] absolute top-[108%] left-[50%] translate-x-[-50%]">{sendingReq ? <Loader2 /> : 'Sign Up'}</button>
         </form>
     )
 }

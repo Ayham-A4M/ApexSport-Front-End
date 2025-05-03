@@ -11,6 +11,7 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 
+
 const LoginForm = () => {
     const [hidePass, setHidePass] = useState(true);
     const userContext = useContext(User);
@@ -50,7 +51,7 @@ const LoginForm = () => {
                 <IoEyeOff className="w-[20px] top-[50%] translate-y-[-50%] text-slate-300 h-[20px] absolute right-[10px]" style={{ display: `${hidePass ? 'none' : 'block'}` }} onClick={() => { setHidePass(true) }} />
                 <input type={hidePass ? 'password' : 'text'} placeholder="Password:" className={` login_signup_input ${errors.password ? 'border-red-500 border-[2px]' : ''}`} {...register('password')} />
             </div>
-            <button type="submit" className="bg-slate-300 text-slate-700  font-bold px-[20px] py-[7px] rounded-[6px] absolute top-[100%] left-[50%] translate-x-[-50%]">{sendingReq ? <Loader2 /> : 'Login'}</button>
+            <button disabled={sendingReq} type="submit" className="bg-slate-300 text-slate-700  font-bold px-[20px] py-[7px] rounded-[6px] absolute top-[100%] left-[50%] translate-x-[-50%]">{sendingReq ? <Loader2 /> : 'Login'}</button>
         </form>
     )
 }

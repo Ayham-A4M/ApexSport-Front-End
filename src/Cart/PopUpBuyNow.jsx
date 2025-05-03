@@ -50,7 +50,7 @@ export const PopUpBuyNow = ({ numberOfItems, setShowPopUp, subTotalPrice }) => {
                     </div>
                     {/* await handleBuyNow(country, city, street, setShowPopUp, setRefreshFetch) */}
                     <div className="flex justify-center mt-[30px] ">
-                        <button className="w-fit px-[20px] flex justify-center items-center py-[4px] rounded-[20px] border-[--main-blue] border-[2px]" onClick={async (e) => { e.preventDefault(); buyNow() }}>{sendingReq ? <Loader2 /> : 'Buy Now'}</button>
+                        <button disabled={sendingReq} className="w-fit px-[20px] flex justify-center items-center py-[4px] rounded-[20px] border-[--main-blue] border-[2px]" onClick={async (e) => { e.preventDefault(); buyNow() }}>{sendingReq ? <Loader2 /> : 'Buy Now'}</button>
                     </div>
                 </form>
             </div>
